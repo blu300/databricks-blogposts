@@ -31,13 +31,13 @@ jobs:
         if: success()
         uses: databricks/setup-cli@main
 
-      - name: Deploy the bundle
-        if: success()
-        run: databricks bundle deploy -t qa
-        env:
-          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST_URL }}
-          DATABRICKS_CLIENT_ID: ${{ secrets.DATABRICKS_SP_CLIENT_ID }}
-          DATABRICKS_CLIENT_SECRET: ${{ secrets.DATABRICKS_SP_SECRET }}
+      # - name: Deploy the bundle
+      #   if: success()
+      #   run: databricks bundle deploy -t qa
+      #   env:
+      #     DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST_URL }}
+      #     DATABRICKS_CLIENT_ID: ${{ secrets.DATABRICKS_SP_CLIENT_ID }}
+      #     DATABRICKS_CLIENT_SECRET: ${{ secrets.DATABRICKS_SP_SECRET }}
   
   
   draft-new-release:
