@@ -28,7 +28,8 @@ jobs:
       - name: Install Databricks CLI
         if: success()
         uses: databricks/setup-cli@main
-
+      - name: Say hello
+        run: echo "hello from $GITHUB_REF_NAME"
       # - name: Deploy the bundle
       #   if: success()
       #   run: databricks bundle deploy -t prod
